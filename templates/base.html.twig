@@ -8,8 +8,8 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}
+
+        {% block javascripts %} {% block body %}{% endblock %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </body>

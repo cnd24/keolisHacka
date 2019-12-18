@@ -18,4 +18,3 @@ class MapController extends AbstractController
         return $this->render('map.html.twig');
     }
 }
-
