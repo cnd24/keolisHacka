@@ -16,6 +16,6 @@ class DefaultController extends AbstractController
 
     public function index() :Response
     {
-        return $this->render('Page_keodex/keodex.html.twig');
+        return $this->render('Page_Keodex/keodex.html.twig');
     }
 }
