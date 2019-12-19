@@ -1,6 +1,5 @@
 
     .category_button {
-        border-left: solid 5px $grey-color;
         padding-left: 1rem;
         letter-spacing: 0.2rem;
         text-align: start;
@@ -57,4 +56,13 @@
 
     .fas fa-circle {
         margin-right: 10px;
+    }
+
+    .title{
+        color: $secondary-color;
+    }
+
+    .imgCategory{
+        width: 20px;
+        margin-right: 20px;
     }
