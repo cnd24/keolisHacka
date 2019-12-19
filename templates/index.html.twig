@@ -8,15 +8,19 @@
             </div>
         </div>
         <h1 class="text-center">Bienvenue !</h1>
+        <div class="row justify-content-center mt-4" style="color: #B3CCBF; font-size: 20px"> <i class="fab fa-envira"></i></div>
+
         <div class="col-sm-12 text-center pt-5">
             <a href="{{ path('app_collection') }}">
                 <img style="width:100px;" src="{{ asset('build/images/ginkgo.png') }}" alt="Skin">
                 <h2 class="text-center p-3">Ta Collection</h2>
             </a>
         </div>
+        <div class="row justify-content-center m-3" style="color: #B3CCBF; font-size: 20px"> <i class="fab fa-envira"></i></div>
+
         <div class="col-sm-12 text-center p-3">
-            <h3 class="mb-3">Cherche les kéocaches disponibles sur ton trajet</h3>
-            <a href="{{ path('map') }}" class="btn btn-primary btn-lg btn-block font-weight-bold"><i class="fas fa-map-marker-alt mr-2"></i> C'est parti !</a>
+            <h3 class="mb-4 mt-4" style="color: #B3CCBF; font-size: 25px">Cherche les kéocaches disponibles sur ton trajet</h3>
+            <a href="{{ path('map') }}" class="btn btn-primary btn-lg btn-block font-weight-bold"><h4><i class="fas fa-map-marker-alt mr-2"></i> C'est parti !</h4></a>
         </div>
     </div>
 {% endblock %}
