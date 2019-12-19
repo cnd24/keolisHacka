@@ -1,6 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
+@import "vars";
+@import "keodex";
 
-
-body {
-    background-color: lightgray;
-}
+@import "map.scss";
+@import "qr.scss";
