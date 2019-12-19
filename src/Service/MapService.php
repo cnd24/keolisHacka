@@ -8,6 +8,7 @@ use Symfony\Component\HttpClient\HttpClient;
 
 class MapService
 {
+
     public function getInfoStations(): array
     {
         $client = HttpClient::create();
@@ -44,6 +45,7 @@ class MapService
         }
         return $infoBus;
     }
+
 
 
 
