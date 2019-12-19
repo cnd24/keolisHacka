@@ -9,12 +9,13 @@
         </div>
         <h1 class="text-center">Bienvenue !</h1>
         <div class="col-sm-12 text-center pt-5">
-            <img style="width:100px;" src="{{ asset('build/images/ginkgo.png') }}" alt="Skin">
-            <h2 class="text-center p-3">Ta Collection</h2>
+            <a href="{{ path('app_collection') }}">
+                <img style="width:100px;" src="{{ asset('build/images/ginkgo.png') }}" alt="Skin">
+                <h2 class="text-center p-3">Ta Collection</h2>
+            </a>
         </div>
         <div class="col-sm-12 text-center p-5">
             <button type="button" class="btn btn-primary btn-lg btn-block">Ou veux tu aller ?<i class="fas fa-angle-right p-2"></i></button>
-
         </div>
     </div>
 {% endblock %}
