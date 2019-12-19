@@ -1,11 +1,50 @@
+{% extends 'base.html.twig' %}
+
 {% block content %}
+    <div class="wrapper__outer">
+        <div class="wrapper">
+            <div class="confetti-25"></div>
+            <div class="confetti-24"></div>
+            <div class="confetti-23"></div>
+            <div class="confetti-22"></div>
+            <div class="confetti-21"></div>
+            <div class="confetti-20"></div>
+            <div class="confetti-19"></div>
+            <div class="confetti-18"></div>
+            <div class="confetti-17"></div>
+            <div class="confetti-16"></div>
+            <div class="confetti-15"></div>
+            <div class="confetti-14"></div>
+            <div class="confetti-13"></div>
+            <div class="confetti-12"></div>
+            <div class="confetti-11"></div>
+            <div class="confetti-10"></div>
+            <div class="confetti-9"></div>
+            <div class="confetti-8"></div>
+            <div class="confetti-7"></div>
+            <div class="confetti-6"></div>
+            <div class="confetti-5"></div>
+            <div class="confetti-4"></div>
+            <div class="confetti-3"></div>
+            <div class="confetti-2"></div>
+            <div class="confetti-1"></div>
+            <div class="confetti-0"></div>
+        </div>
+
     <div class="container-fluid">
-        <h2>BRAVO !</h2>
-        <p>Tu as gagné un nouvel objet</p>
-
-        <img src="{{ asset('build/images/clover.png') }}">
-
-        <a href="" class="mt-5">Ajouter au Keodex</a>
+        <div class="col-sm-12 text-center p-3 skin d-flex justify-content-center align-items-center">
+            <div class="d-flex justify-content-center align-items-center" style="background-color:#fff; border-radius: 50%; height : 200px; width: 200px;">
+                <img class="skin-image" src="{{ asset('build/images/clover.png') }}" alt="Skin">
+            </div>
+        </div>
+        <h1 class="text-center">BRAVO !</h1>
+        <div class="col-sm-12 text-center pt-5">
+            <h2 class="text-center p-3">Tu as remporté un nouvel objet</h2>
+        </div>
+        <div class="col-sm-12 text-center p-3">
+            <a href="" class="btn btn-primary btn-lg btn-block font-weight-bold"><i class="fas fa-map-marker-alt mr-2"></i> Ajouter au Kéodex</a>
+        </div>
+    </div>
 
     </div>
 {% endblock %}
