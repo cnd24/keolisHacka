@@ -6,7 +6,7 @@
         text-align: start;
     }
 
-    .card{
+    .card {
         border: none;
     }
 
@@ -27,15 +27,11 @@
     }
 
     .card-body {
-        font-size: $primary-color;
+        font-size: 18px;
     }
 
-    .fa-chevron-down:hover, .fa-chevron-up:hover{
+    .fa-chevron-down:hover, .fa-chevron-up:hover {
         color: $grey-color;
-    }
-
-    h3 {
-        font-size: calc(22px + 6 * ((100vw - 320px) / 700));
     }
 
     button[aria-expanded=true] .fa-chevron-down {
@@ -46,6 +42,19 @@
         display: none;
     }
 
-    .pointer{
-        cursor:pointer;
+    .pointer {
+        cursor: pointer;
+    }
+
+    .imageKeodis {
+        width: 50px;
+        padding: 0;
+    }
+
+    .imagehihi{
+        padding: 0;
+    }
+
+    .fas fa-circle {
+        margin-right: 10px;
     }
