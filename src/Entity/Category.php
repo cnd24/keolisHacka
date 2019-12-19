@@ -28,6 +28,11 @@ class Category
      */
     private $lines;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $path;
+
     public function __construct()
     {
         $this->lines = new ArrayCollection();
@@ -77,6 +82,18 @@ class Category
                 $line->setCategory(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPath(): ?string
+    {
+        return $this->path;
+    }
+
+    public function setPath(string $path): self
+    {
+        $this->path = $path;
 
         return $this;
     }

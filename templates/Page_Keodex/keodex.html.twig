@@ -1,21 +1,21 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <h1 class="title d-flex justify-content-center m-4">KEODEX</h1>
+    <h1 class="title d-flex justify-content-center m-4">Kéodex</h1>
     <div class="accordion justify-content-start " id="accordionDeals">
         <div class="card">
             {% for category in categories %}
                 <div class="card-header card_button" id="headingOne">
-                    <button class="btn btn-link category_button mb-3" type="button" data-toggle="collapse"
+                    <button class="btn btn-link category_button mb-3 " type="button" data-toggle="collapse"
                             data-target="#collapse{{ category.id }}"
-                            aria-expanded="false" aria-controls="collapseOne"><h3>{{ category.name }}<i class="fas fa-chevron-down ml-3"></i><i class="fas fa-chevron-up ml-3"></i></h3>
+                            aria-expanded="false" aria-controls="collapseOne"><h3 class="title"><img src="{{ asset(category.path) }}" class="imgCategory">{{ category.name }}<i class="fas fa-chevron-down ml-3"></i><i class="fas fa-chevron-up ml-3"></i></h3>
                     </button>
                 </div>
                 {% for line in category.lines %}
                     <div id="collapse{{ category.id }}" class="collapse" aria-labelledby="headingOne"
                          data-parent="#accordionDeals">
                         <div class="card-body tool_card">
-                            <i class="fas fa-1x fa-angle-double-right mr-3"></i>{{ line.numberName }}
+                            <h4><span class="badge badge-pill badge-primary" style="background-color: {{ line.color }}">{{ line.numberName }}</span></h4>
                         </div>
                         <div class="row">
                             {% for picture in line.pictures %}
