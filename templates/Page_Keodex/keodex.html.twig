@@ -30,4 +30,17 @@
             {% endfor %}
         </div>
     </div>
+    <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark default-color">
+        <ul class="d-flex flex-row justify-content-between align-items-center">
+            <li class="nav-item m-2">
+                <a class="nav-link" href="{{ path ('app_index') }}"><i class="fas fa-home"></i></a>
+            </li>
+            <li class="nav-item m-2">
+                <a class="nav-link" href="{{ path ('map') }}"><i class="fas fa-map-marker-alt mr-2"></i></a>
+            </li>
+            <li class="nav-item m-2">
+                <a class="nav-link" href="{{ path ('app_collection') }}"><img style="height: 32px" src="{{ asset('build/images/ginkgo(2).png') }}" alt=""></a>
+            </li>
+        </ul>
+    </nav>
 {% endblock %}
