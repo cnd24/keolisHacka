@@ -42,9 +42,9 @@
                     popupAnchor: [-3, -76],
                 });
 
-                {% for coordinate in coordinates %}
-                    var marker = L.marker([{{coordinate.0}}, {{coordinate.1}}], {icon:icone});
-                    marker.bindPopup("<p>Ville</p>");        //TODO: fixer la durée du pop-up en mobile
+                {% for infoStation in infoStations %}
+                    var marker = L.marker([{{infoStation.pointgeo.0}}, {{infoStation.pointgeo.1}}], {icon:icone});
+                    marker.bindPopup("<p> {{ infoStation.nomstation }}</p>");        //TODO: fixer la durée du pop-up en mobile
                     markers.addLayer(marker);
 
                     markersArray.push(marker);
