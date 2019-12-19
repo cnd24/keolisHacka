@@ -17,9 +17,13 @@ class MapController extends AbstractController
     public function index(MapService $mapService): Response
     {
         $infoStations = $mapService->getInfoStations();
+        $infoParks = $mapService->getInfoParks();
+        $infoBus = $mapService->getInfoBus();
 
         return $this->render('map.html.twig', [
             'infoStations' => $infoStations,
+            'infoParks' => $infoParks,
+            'infoBus' => $infoBus,
         ]);
     }
 }

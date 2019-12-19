@@ -10,7 +10,7 @@
     {{ encore_entry_link_tags('app') }}
 {% endblock %}
 
- {% block body %}
+ {% block content %}
      <h1>carte</h1>
      <div id="maCarte"></div>
 
@@ -35,20 +35,98 @@
 
                 var markers = L.markerClusterGroup();
 
-                var icone = L.icon({
-                    iconUrl: "build/images/bike.png",
-                    iconSize: [50, 50],
+                var iconeBike = L.icon({
+                    iconUrl: "build/images/marker-green-bike.png",
+                    iconSize: [50, 62],
+                    iconAnchor: [25, 50],
+                    popupAnchor: [-3, -76],
+                });
+
+                var iconeBikeGold = L.icon({
+                    iconUrl: "build/images/marker-gold-bike.png",
+                    iconSize: [50, 62],
+                    iconAnchor: [25, 50],
+                    popupAnchor: [-3, -76],
+                });
+
+                var iconePark = L.icon({
+                    iconUrl: "build/images/marker-green-park.png",
+                    iconSize: [50, 62],
+                    iconAnchor: [25, 50],
+                    popupAnchor: [-3, -76],
+                });
+
+                var iconeParkGold = L.icon({
+                    iconUrl: "build/images/marker-gold-park.png",
+                    iconSize: [50, 62],
+                    iconAnchor: [25, 50],
+                    popupAnchor: [-3, -76],
+                });
+
+
+                var iconeBus = L.icon({
+                    iconUrl: "build/images/marker-green-bus.png",
+                    iconSize: [50, 62],
+                    iconAnchor: [25, 50],
+                    popupAnchor: [-3, -76],
+                });
+
+                var iconeBusGold = L.icon({
+                    iconUrl: "build/images/marker-gold-bus.png",
+                    iconSize: [50, 62],
                     iconAnchor: [25, 50],
                     popupAnchor: [-3, -76],
                 });
 
                 {% for infoStation in infoStations %}
-                    var marker = L.marker([{{infoStation.pointgeo.0}}, {{infoStation.pointgeo.1}}], {icon:icone});
+                    var marker = L.marker([{{infoStation.pointgeo.0}}, {{infoStation.pointgeo.1}}], {icon:iconeBike});
                     marker.bindPopup("<p> {{ infoStation.nomstation }}</p>");        //TODO: fixer la durée du pop-up en mobile
                     markers.addLayer(marker);
 
                     markersArray.push(marker);
                 {% endfor %}
+
+                {% for infoPark in infoParks %}
+                    var marker = L.marker([{{infoPark.coords.0}}, {{infoPark.coords.1}}], {icon:iconePark});
+                    marker.bindPopup("<p> {{ infoPark.name }}</p>");
+                    markers.addLayer(marker);
+
+                    markersArray.push(marker);
+                {% endfor %}
+
+                {% for infoOneBus in infoBus %}
+                    var marker = L.marker([{{infoOneBus.geo_point_2d.0}}, {{infoOneBus.geo_point_2d.1}}], {icon:iconeBus});
+                    marker.bindPopup("<p> {{ infoOneBus.num_ligne }}</p>");
+                    markers.addLayer(marker);
+
+                    markersArray.push(marker);
+                {% endfor %}
+
+                var marker = L.marker([47.911582, 1.938054], {icon:iconeParkGold});
+                marker.bindPopup("<p> Trouvé</p>");
+                markers.addLayer(marker);
+
+                markersArray.push(marker);
+
+                var marker = L.marker([47.911506, 1.914290], {icon:iconeBikeGold});
+                marker.bindPopup("<p> Trouvé</p>");
+                markers.addLayer(marker);
+
+                markersArray.push(marker);
+
+                var marker = L.marker([47.905866, 1.931547], {icon:iconeBikeGold});
+                marker.bindPopup("<p> Trouvé</p> <img src=\"/build/images/marker-green-bus.png\">");
+                markers.addLayer(marker);
+
+                markersArray.push(marker);
+
+                var marker = L.marker([47.8905282729, 1.9006144518], {icon:iconeBusGold});
+                marker.bindPopup("<p> Trouvé</p>");
+                markers.addLayer(marker);
+
+                markersArray.push(marker);
+
+
 
                 var groupe = new L.featureGroup(markersArray);
                 carte.fitBounds(groupe.getBounds().pad(0.5));
