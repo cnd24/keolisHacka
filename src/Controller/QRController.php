@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\PictureRepository;
 use App\Service\QrService;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -14,11 +15,14 @@ class QRController extends AbstractController
      * @Route("/qr", name="qr")
      * @return Response
      */
-    public function index(): Response
+    public function index(PictureRepository $pictureRepository): Response
     {
-
-        return $this->render('qr.html.twig');
+        $counts = $pictureRepository->findAll();
+        return $this->render('qr.html.twig', [
+            'counts'=> $counts
+        ]);
     }
+
 
 
     /**

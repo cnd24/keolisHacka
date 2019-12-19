@@ -1,7 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
+
+    <div class="container-fluid">
+        <div class="col-sm-12 d-flex flex-row-reverse pt-2">
+            <div class="d-flex justify-content-center align-items-center flex-row-reverse mb-2">
+                <img style="width:40px;" src="{{ asset('build/images/ginkgo.png') }}" alt="Symbole collection">
+                <p class="align-self-center m-0 p-1 compteur"> {{ counts |length}} / 80</p>
+            </div>
+        </div>
+    </div>
+
     <h1 class="title d-flex justify-content-center m-4">Kéodex</h1>
+
     <div class="accordion justify-content-start " id="accordionDeals">
         <div class="card">
             {% for category in categories %}
