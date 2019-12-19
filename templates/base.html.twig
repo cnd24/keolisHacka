@@ -8,17 +8,22 @@
         {% block stylesheets %}
                    {{ encore_entry_link_tags('app') }}
         {% endblock %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-    <header>
-        {% block navbar %}{% endblock %}
-    </header>
-
+        {% block compteur %}
+            {% include 'compteur.html.twig' %}
+        {% endblock %}
         {% block content %}{% endblock %}
 
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
+
+        <header>
+            {% block navbar %}{% endblock %}
+        </header>
+
     </body>
 </html>
