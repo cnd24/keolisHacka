@@ -3,13 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome !{% endblock %}</title>
+        <link href="https://fonts.googleapis.com/css?family=Imprima&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Yantramanav&display=swap" rel="stylesheet">
         {% block stylesheets %}
                    {{ encore_entry_link_tags('app') }}
         {% endblock %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-
-
+        {% block compteur %}
+            {% include 'compteur.html.twig' %}
+        {% endblock %}
         {% block content %}{% endblock %}
 
 
