@@ -15,9 +15,12 @@ class DefaultController extends AbstractController
      * @param LineRepository $lineRepository
      * @return Response
      */
-    public function index(CategoryRepository $categoryRepository, LineRepository $lineRepository) : Response
+    public function index(CategoryRepository $categoryRepository, LineRepository $lineRepository, PictureRepository $pictureRepository) : Response
     {
-        return $this->render('index.html.twig');
+        $counts = $pictureRepository->findAll();
+        return $this->render('index.html.twig', [
+            'counts'=> $counts
+        ]);
     }
 
     /**
@@ -32,10 +35,13 @@ class DefaultController extends AbstractController
         $categories = $categoryRepository->findAll();
         $lines = $lineRepository->findAll();
         $picture = $pictureRepository->findAll();
+        $counts = $pictureRepository->findAll();
+
         return $this->render('Page_Keodex/keodex.html.twig', [
             'categories' => $categories,
             'lines' => $lines,
-            'picture' => $picture
+            'picture' => $picture,
+            'counts'=> $counts
         ]);
     }
 }

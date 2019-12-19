@@ -1,6 +1,14 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
+    <div class="container-fluid">
+        <div class="col-sm-12 d-flex flex-row-reverse pt-2">
+            <div class="d-flex justify-content-center align-items-center flex-row-reverse mb-2">
+                <img style="width:40px;" src="{{ asset('build/images/ginkgo.png') }}" alt="Symbole collection">
+                <p class="align-self-center m-0 p-1 compteur"> {{ counts |length}} / 80</p>
+            </div>
+        </div>
+    </div>
     <div class="wrapper__outer">
         <div class="wrapper">
             <div class="confetti-25"></div>
