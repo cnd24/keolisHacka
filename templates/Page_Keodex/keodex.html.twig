@@ -17,6 +17,9 @@
                         <div class="card-body tool_card ml-3">
                             <i class="fas fa-1x fa-angle-double-right mr-3"></i>{{ line.numberName }}
                         </div>
+                    {% for line in line.pictures %}
+                        <div>{{ picture.path }}</div>
+                        {% endfor %}
                     </div>
                 {% endfor %}
             {% endfor %}
