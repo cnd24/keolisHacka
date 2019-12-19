@@ -16,10 +16,10 @@ class MapController extends AbstractController
      */
     public function index(MapService $mapService): Response
     {
-        $coordinates = $mapService->getMarkers();
+        $infoStations = $mapService->getInfoStations();
 
         return $this->render('map.html.twig', [
-            'coordinates' => $coordinates,
+            'infoStations' => $infoStations,
         ]);
     }
 }
