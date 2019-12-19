@@ -17,6 +17,9 @@
                         <div class="card-body tool_card ml-3">
                             <i class="fas fa-1x fa-angle-double-right mr-3"></i>{{ line.numberName }}
                         </div>
+                    {% for picture in line.pictures %}
+                        <img src="{{ asset(picture.path) }}" class="imageKeodis d-flex align-items-between m-5" alt="icone">
+                        {% endfor %}
                     </div>
                 {% endfor %}
             {% endfor %}
