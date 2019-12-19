@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="container-fluid">
+
+        <div class="col-sm-12 d-flex flex-row-reverse pt-2">
+            <div class="d-flex justify-content-center align-items-center flex-row-reverse">
+                <img style="width:40px;" src="{{ asset('build/images/ginkgo.png') }}" alt="Symbole collection">
+                <p class="align-self-center m-0 p-1"> 01/50 </p>
+            </div>
+        </div>
+        <div class="col-sm-12 text-center p-3 skin d-flex justify-content-center align-items-center">
+            <div class="d-flex justify-content-center align-items-center" style="background-color:#C19536; border-radius: 50%; height : 200px; width: 200px;">
+                <img class="skin-image" src="{{ asset('build/images/berries.png') }}" alt="Skin">
+            </div>
+        </div>
+        <h1 class="text-center">Welcome !</h1>
+        <div class="col-sm-12 text-center pt-5">
+            <img style="width:100px;" src="{{ asset('build/images/ginkgo.png') }}" alt="Skin">
+            <h2 class="text-center p-3">Ta Collection</h2>
+        </div>
+        <div class="col-sm-12 text-center p-5">
+            <button type="button" class="btn btn-primary btn-lg btn-block">Ou veux tu aller ?</button>
+        </div>
+    </div>
+{% endblock %}
