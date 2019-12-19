@@ -12,17 +12,30 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
-    /**
+
+     /**
      * @Route("/", name="app_index")
      * @param CategoryRepository $categoryRepository
      * @param LineRepository $lineRepository
      * @return Response
      */
 
-    public function index(
-        CategoryRepository $categoryRepository,
-        LineRepository $lineRepository
-    ) {
+    public function index(CategoryRepository $categoryRepository, LineRepository $lineRepository) : Response
+    {
+
+
+        return $this->render('index.html.twig');
+    }
+
+    /**
+     * @Route("/collection", name="app_collection")
+     * @param CategoryRepository $categoryRepository
+     * @param LineRepository $lineRepository
+     * @return Response
+     */
+
+    public function indexCollection(CategoryRepository $categoryRepository, LineRepository $lineRepository) : Response
+    {
         $categories = $categoryRepository->findAll();
         $lines = $lineRepository->findAll();
 
@@ -31,5 +44,5 @@ class DefaultController extends AbstractController
             'categories' => $categories,
             'lines' => $lines
         ]);
-       }
+    }
 }

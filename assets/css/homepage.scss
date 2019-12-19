@@ -1,0 +1,23 @@
+h1, h2, p
+{
+    color : $grey-color;
+}
+
+.container-fluid
+{
+    margin : 0;
+    background-color: $secondary-color;
+}
+
+.btn.btn-primary.btn-lg.btn-block
+{
+    background-color: $primary-color;
+    border: none;
+}
+
+.btn.btn-primary.btn-lg.btn-block:hover
+{
+    background-color: $primary-color;
+    border: none;
+    box-shadow: none;
+}
