@@ -34,6 +34,11 @@ class Line
      */
     private $pictures;
 
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $color;
+
     public function __construct()
     {
         $this->pictures = new ArrayCollection();
@@ -95,6 +100,18 @@ class Line
                 $picture->setLine(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getColor(): ?string
+    {
+        return $this->color;
+    }
+
+    public function setColor(string $color): self
+    {
+        $this->color = $color;
 
         return $this;
     }

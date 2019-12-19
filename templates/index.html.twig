@@ -17,12 +17,29 @@
         </div>
         <h1 class="text-center">Bienvenue !</h1>
         <div class="col-sm-12 text-center pt-5">
-            <img style="width:100px;" src="{{ asset('build/images/ginkgo.png') }}" alt="Skin">
-            <h2 class="text-center p-3">Ta Collection</h2>
+            <a href="{{ path('app_collection') }}">
+                <img style="width:100px;" src="{{ asset('build/images/ginkgo.png') }}" alt="Skin">
+                <h2 class="text-center p-3">Ta Collection</h2>
+            </a>
         </div>
         <div class="col-sm-12 text-center p-3">
             <h3 class="mb-3">Cherche les kéocaches disponibles sur ton trajet</h3>
             <a href="{{ path('map') }}" class="btn btn-primary btn-lg btn-block font-weight-bold"><i class="fas fa-map-marker-alt mr-2"></i> C'est parti !</a>
         </div>
     </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark default-color">
+        <ul class="d-flex flex-row justify-content-between align-items-center">
+            <li class="nav-item m-2">
+                <a class="nav-link" href="{{ path ('app_index') }}"><i class="fas fa-home"></i></a>
+            </li>
+            <li class="nav-item m-2">
+                <a class="nav-link" href="{{ path ('map') }}"><i class="fas fa-map-marker-alt mr-2"></i></a>
+            </li>
+            <li class="nav-item m-2">
+                <a class="nav-link" href="{{ path ('app_collection') }}"><img style="height: 32px" src="{{ asset('build/images/ginkgo(2).png') }}" alt=""></a>
+            </li>
+        </ul>
+    </nav>
 {% endblock %}
+

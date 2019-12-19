@@ -1,11 +1,13 @@
-{% extends 'base.html.twig' %}
+
 
 {% block compteur %}
-    <div class="container-fluid">
+    <div class="container-fluid m-0 pb-3">
         <div class="col-sm-12 d-flex flex-row-reverse pt-2">
-            <div class="d-flex justify-content-center align-items-center flex-row-reverse mb-2">
-                <img style="width:40px;" src="{{ asset('build/images/ginkgo.png') }}" alt="Symbole collection">
-                <p class="align-self-center m-0 p-1 compteur"> 01/50 </p>
+            <div class="d-flex justify-content-center align-items-center flex-row">
+                <div class="compteur-border">
+                    <p class="align-self-center m-0 p-1 compteur">01/50</p>
+                </div>
+                <img class="image-compteur" src="{{ asset('build/images/ginkgo.png') }}" alt="Symbole collection">
             </div>
         </div>
     </div>
