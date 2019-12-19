@@ -22,3 +22,13 @@ p, button
     font-family: 'Yantramanav', sans-serif;
 }
 
+i.fas.fa-home, i.fas.fa-map-marker-alt.mr-2
+{
+    color: $light-color;
+    font-size: 35px;
+}
+
+span.badge.badge-secondary
+{
+    background-color: $primary-color;
+}
