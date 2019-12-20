@@ -2,12 +2,15 @@
 
 {% block compteur %}
     <div class="container-fluid m-0 pb-3">
-        <div class="col-sm-12 d-flex flex-row-reverse pt-2">
+        <div class="col-sm-12 d-flex flex-row-reverse pt-2 justify-content-between align-content-end" style="align-items: baseline; color: #C19536">
             <div class="d-flex justify-content-center align-items-center flex-row">
                 <div class="compteur-border">
                     <p class="align-self-center m-0 p-1 compteur"> {{ counts |length}} / 80</p>
                 </div>
                 <img class="image-compteur" src="{{ asset('build/images/ginkgo.png') }}" alt="Symbole collection">
+            </div>
+            <div>
+                <h5 class="titleWill">Willou</h5>
             </div>
         </div>
     </div>
